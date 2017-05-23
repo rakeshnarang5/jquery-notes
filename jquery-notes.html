@@ -51,3 +51,50 @@ selecting an element from the DOM and changing it using jQuery
 		This is my jQuery enabled page!
 	</div>
 </body>
+
+<!--
+changing div styles using jquery
+all divs will now have green background
+-->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('div').css('background-color', 'Green');
+	});
+</script>
+
+<!--
+how to iterate through each of the divs and do something with it
+-->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('div').each(function() {
+			// current iterated div item is passed to jquery and it's html is passed to alert
+			alert($(this).html());
+		});
+	});
+</script>
+
+<!--
+selecting with id
+-->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		alert($("#form1").html());
+	});
+</script>
+
+<!--
+changing css using class selectors
+-->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('div.BlueDiv').css('border', '2px solid red');
+		// here only divs will be selected
+		$('.BlueDiv').css('border', '2px solid red');
+		// this will select all elements of class BlueDiv and change its css
+	});
+</script>
